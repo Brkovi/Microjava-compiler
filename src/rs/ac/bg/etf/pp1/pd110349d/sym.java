@@ -15,7 +15,7 @@ public class sym {
 	public static final int RETURN	= 10;
 	public static final int VOID	= 11;
 	public static final int WHILE 	= 12;
-	public static final int EXTENST	= 13;
+	public static final int EXTENDS	= 13;
 	
 	//Token types
 	public static final int IDENT	= 14;
@@ -51,4 +51,5 @@ public class sym {
 	public static final int L_CURLY	= 42; // {
 	public static final int R_CURLY	= 43; // }	
 	
+	public static final int EOF		= 44;
 }

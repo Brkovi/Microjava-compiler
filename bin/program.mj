@@ -1,0 +1,11 @@
+program MJProgram
+	int x, y;
+{
+	void main() {
+		'k'
+		"string"
+		//komentar
+		true
+		false
+	}
+}

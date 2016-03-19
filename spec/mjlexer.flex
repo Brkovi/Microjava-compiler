@@ -54,10 +54,10 @@ import java_cup.runtime.Symbol;
 "true"|"false"		{ return new_symbol ( sym.BOOL_CONST, yytext()); }
 
 ([a-z]|[A-Z])[a-z|A-Z|0-9|_]* 	{ return new_symbol (sym.IDENT, yytext()); }
-[0-9]+  		{ return new_symbol(sym.NUM, new Integer (yytext())); }
+[0-9]+  				{ return new_symbol(sym.NUM, new Integer (yytext())); }
 "'"[\x20-xff]"'"		{ return new_symbol ( sym.CHAR_CONST, yytext().charAt(1)); }
 
-"\"".*"\""		{ return new_symbol ( sym.STR_CONST, yytext().substring(1, yytext().length() - 1)); }
+"\"".*"\""				{ return new_symbol ( sym.STR_CONST, yytext().substring(1, yytext().length() - 1)); }
 
 
 "+" 		{ return new_symbol(sym.PLUS, yytext()); }

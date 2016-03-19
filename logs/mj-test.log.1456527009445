@@ -1,0 +1,20 @@
+INFO  23:48:28,865 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  23:48:28,870 - #1 program
+INFO  23:48:28,870 - #14 MJProgram
+INFO  23:48:28,870 - #14 int
+INFO  23:48:28,870 - #14 x
+INFO  23:48:28,870 - #36 ,
+INFO  23:48:28,870 - #14 y
+INFO  23:48:28,870 - #35 ;
+INFO  23:48:28,870 - #42 {
+INFO  23:48:28,870 - #11 void
+INFO  23:48:28,870 - #14 main
+INFO  23:48:28,870 - #38 (
+INFO  23:48:28,870 - #39 )
+INFO  23:48:28,870 - #42 {
+INFO  23:48:28,870 - #16 k
+INFO  23:48:28,870 - #18 string
+INFO  23:48:28,870 - #17 true
+INFO  23:48:28,870 - #17 false
+INFO  23:48:28,870 - #43 }
+INFO  23:48:28,870 - #43 }

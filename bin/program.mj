@@ -2,7 +2,7 @@ program MJProgram
 	int x, y;
 {
 	void main() {
-		'k'
+		//'k'
 		"string"
 		//komentar
 		true

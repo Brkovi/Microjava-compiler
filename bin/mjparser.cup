@@ -3,12 +3,16 @@ package rs.ac.bg.etf.pp1.pd110349d;
 import java_cup.runtime.*;
 import org.apache.log4j.*;
 
-// import java.io.*;
+//import java.io.*;
 
 
 parser code {:
 	
 	int printCallCount = 0;
+	
+	int globalVarCount = 0, localVarCount = 0, globalConstCount = 0, globalArrayCount = 0;
+	
+	bool mainEntered = false;
 	
 	Logger log = Logger.getLogger(getClass());
    
@@ -43,10 +47,29 @@ scan with {:
 	return s;
 :}
 
-terminal PROG, L_CURLY, R_CURLY, ASSIGN, COMMA ;
+terminal PROG, ASSIGN, COMMA, SEMI, CLASS, EXTENDS, CONST, VOID, WHILE, BREAK ;
 
+terminal RETURN, READ, PRINT, IF, ELSE, INC, DEC, LOG_OR, LOG_AND, NEW, DOT ;
+
+// PARENTHESES
+terminal L_CURLY, R_CURLY, L_BRACKET, R_BRACKET, L_PAREN, R_PAREN ;
+
+// RELATION OPERATORS
+terminal EQUAL, N_EQUAL, GR_THAN, GR_EQ_THAN, LE_THAN, LE_EQ_THAN ;
+
+// ADD OPERATORS
+terminal PLUS, MINUS ;
+
+// MULL OPERATORS
+terminal MUL, DIV, MOD ;
+
+// IDENT
 terminal String IDENT ;
 
+//NUM
+terminal Integer NUM;
+
+// CONSTANTS
 terminal Character CHAR_CONST ;
 terminal Boolean BOOL_CONST ;
 terminal String STR_CONST ;
@@ -54,10 +77,61 @@ terminal String STR_CONST ;
 // Program
 non terminal Program ;
 non terminal FieldDeclList, FieldDecl, ConstDecl, VarDecl, ClassDecl ;
-non terminal MethodDeclList ;
+non terminal MethodDeclList, MethodDecl ;
 
 // ConstDecl
 non terminal ConstValList, ConstVal ;
+
+// VarDecl
+non terminal VarList, Var, Array, Brackets ;
+
+// OptionalBrackets
+non terminal OptionalBrackets ;
+
+// ClassDecl
+non terminal OptionalExtends, VarDeclList, OptionalMethodDeclList ;
+
+// MethodDecl
+non terminal TypeOrVoid, OptionalFormPars, StatementList, FormPars, Statement ;
+
+// FormPars
+
+// Type
+non terminal Type ;
+
+// Statement
+non terminal Designator, Group1, Condition, OptExpr, OptNum ;
+non terminal Expr, OptActPars, ActPars, Matched, Unmatched ;
+
+// ActPars
+non terminal AditionalExprList ;
+
+// Condition
+non terminal CondTerm, AditionalCondTermList ;
+
+// CondTerm
+non terminal CondFact, AditionalCondFactList ;
+
+// CondFact
+non terminal OptRelExpr, Relop ;
+
+// Expr
+non terminal OptMinus, Term, AddTermList, Addop ;
+
+// Term
+non terminal Factor, MulFactorList, Mulop ;
+
+// Factor
+non terminal OptDesPars, OptBracketExpr ;
+
+// Designator
+non terminal Group2List, Group2 ;
+
+// Relop
+
+// Addop
+
+// Mulop
 
 
 //Program
@@ -76,11 +150,11 @@ MethodDeclList ::= MethodDeclList MethodDecl
 					;
 
 // ConstDecl
-ConstDecl ::= CONST Type IDENT ASSIGN ConstValList SEMI ;
+ConstDecl ::= CONST Type ConstValList SEMI ;
 
 ConstValList ::= ConstValList COMMA ConstVal
 			|
-			ConstVal
+			IDENT ASSIGN ConstVal
 			;
 			
 ConstVal ::= NUM | CHAR_CONST | BOOL_CONST | STR_CONST;
@@ -91,9 +165,15 @@ VarDecl ::= Type VarList SEMI ;
 VarList ::= VarList COMMA Var
 			|
 			Var
+			|
+			Array
 			;
 			
-Var ::= IDENT OptionalBrackets ;
+Var ::= IDENT ;
+
+Array ::= IDENT Brackets ;
+
+Brackets ::= L_BRACKET R_BRACKET ;
 
 // OptionalBrackets
 OptionalBrackets ::= L_BRACKET R_BRACKET
@@ -115,7 +195,7 @@ VarDeclList ::= VarDeclList VarDecl
 				/* epsilon */
 				;	  
 			  
-OptionalMethodDeclList ::= L_CURLY MethodDeclList RCURLY
+OptionalMethodDeclList ::= L_CURLY MethodDeclList R_CURLY
 							|
 							/* epsilon */
 							;
@@ -140,13 +220,181 @@ StatementList ::= StatementList Statement
 					;
 					
 // FormPars
-FormPars ::= Type VarList ;
+FormPars ::= FormPars COMMA Type Var
+				|
+				Type Var
+				;
 
 // Type
 Type ::= IDENT;
 
 // Statement
-Statement ::= Designator ASSIGN 	  
+Statement ::= Matched | Unmatched ;
+
+Unmatched ::= IF L_PAREN Condition R_PAREN Statement
+				|
+				IF L_PAREN Condition R_PAREN Matched ELSE Unmatched
+				|
+				WHILE L_PAREN Condition R_PAREN Unmatched
+				;
+
+Matched ::= Designator Group1 SEMI
+				|
+				IF L_PAREN Condition R_PAREN Matched ELSE Matched
+				|
+				WHILE L_PAREN Condition R_PAREN Matched
+				|
+				BREAK SEMI
+				|
+				RETURN OptExpr SEMI
+				|
+				READ L_PAREN Designator R_PAREN SEMI
+				|
+				PRINT L_PAREN Expr OptNum R_PAREN SEMI
+				|
+				L_CURLY StatementList R_CURLY
+				;
+			  
+Group1 ::= ASSIGN Expr | L_PAREN OptActPars R_CURLY | INC | DEC ;
+
+OptActPars ::= ActPars
+				|
+				/* epsilon */
+				;
+			
+OptExpr ::= Expr
+			|
+			/* epsilon */
+			;
+			
+OptNum ::= NUM
+			|
+			/* epsilon */
+			;					
+		
+// ActPars		
+ActPars ::= Expr AditionalExprList;
+
+AditionalExprList ::= AditionalExprList COMMA Expr
+						|
+						/* epsilon */
+						;
+						
+// Condition
+Condition ::= CondTerm AditionalCondTermList;
+
+AditionalCondTermList ::= AditionalCondTermList LOG_OR CondTerm
+							|
+							/* epsilon */
+							;	  
+
+// CondTerm
+CondTerm ::= CondFact AditionalCondFactList;
+
+AditionalCondFactList ::= AditionalCondFactList LOG_AND	CondFact
+							|
+							/* epsilon */
+							;		  
+			  
+// CondFact
+CondFact ::= Expr OptRelExpr;
+
+OptRelExpr ::= Relop Expr
+				|
+				/* epsilon */
+				;
+
+// Expr
+Expr ::= OptMinus Term AddTermList;
+
+OptMinus ::= MINUS
+				|
+				/* epsilon */
+				;
+
+AddTermList ::= AddTermList Addop Term
+				|
+				/* epsilon */
+				;
+								
+// Term
+Term ::= Factor MulFactorList;
+
+MulFactorList ::= MulFactorList Mulop Factor
+					|
+					/* epsilon */
+					;
+					
+// Factor
+Factor ::= Designator OptDesPars
+			|
+			NUM
+			|
+			CHAR_CONST
+			|
+			STR_CONST
+			|
+			NEW Type OptBracketExpr
+			|
+			L_PAREN Expr R_PAREN
+			;
+
+OptBracketExpr ::= L_BRACKET Expr R_BRACKET
+					|
+					/* epsilon */
+					;
+
+OptDesPars ::= L_PAREN OptActPars R_PAREN
+				|
+				/* epsilon */
+				;					
+			  
+// Designator
+Designator ::= IDENT Group2List;
+
+Group2List ::= Group2List Group2
+				|
+				/* epsilon */
+				;
+				
+Group2 ::= DOT IDENT
+			|
+			L_BRACKET Expr R_BRACKET
+			;
+			
+// Relop
+Relop ::= EQUAL
+			|
+			N_EQUAL
+			|
+			GR_THAN
+			|
+			GR_EQ_THAN
+			|
+			LE_THAN
+			|
+			LE_EQ_THAN
+			;
+			
+// Addop
+Addop ::= PLUS
+			|
+			MINUS
+			;
+			
+// Mulop
+Mulop ::= MUL
+			|
+			DIV
+			|
+			MOD
+			;			
+			  
+			  
+			  
+			  
+			  
+			  
 			  
 			  
 			  

@@ -1,0 +1,22 @@
+INFO  02:58:41,030 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  02:58:41,038 - #2 program
+INFO  02:58:41,038 - #40 MJProgram
+INFO  02:58:41,038 - #40 int
+INFO  02:58:41,038 - #40 x
+INFO  02:58:41,038 - #4 ,
+INFO  02:58:41,038 - #40 y
+INFO  02:58:41,038 - #5 ;
+INFO  02:58:41,038 - #23 {
+INFO  02:58:41,038 - #9 void
+INFO  02:58:41,039 - #40 main
+INFO  02:58:41,039 - #27 (
+INFO  02:58:41,039 - #28 )
+INFO  02:58:41,039 - #23 {
+INFO  02:58:41,039 - #40 int
+INFO  02:58:41,039 - #40 z
+ERROR 02:58:41,039 - 
+Sintaksna greska na liniji 5
+ERROR 02:58:41,039 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
+INFO  02:58:41,039 - Print calls = 0
+INFO  02:58:41,039 - Global var count = 2
+INFO  02:58:41,039 - Global array count = 0

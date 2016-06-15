@@ -1,0 +1,46 @@
+INFO  04:15:08,161 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  04:15:08,170 - #2 program
+INFO  04:15:08,170 - #40 MJProgram
+INFO  04:15:08,170 - #40 int
+INFO  04:15:08,170 - #40 x
+INFO  04:15:08,170 - #4 ,
+INFO  04:15:08,170 - #40 y
+INFO  04:15:08,170 - #5 ;
+INFO  04:15:08,170 - #40 double
+INFO  04:15:08,171 - #40 niz
+INFO  04:15:08,171 - #25 [
+INFO  04:15:08,171 - #26 ]
+INFO  04:15:08,171 - #5 ;
+INFO  04:15:08,171 - #6 class
+INFO  04:15:08,171 - #40 foo
+INFO  04:15:08,171 - #23 {
+INFO  04:15:08,171 - #24 }
+INFO  04:15:08,171 - #23 {
+INFO  04:15:08,171 - #9 void
+INFO  04:15:08,171 - #40 main
+INFO  04:15:08,172 - #27 (
+INFO  04:15:08,172 - #28 )
+INFO  04:15:08,172 - #40 int
+INFO  04:15:08,172 - #40 z
+INFO  04:15:08,172 - #5 ;
+INFO  04:15:08,172 - #23 {
+INFO  04:15:08,172 - #23 {
+INFO  04:15:08,172 - #40 double
+INFO  04:15:08,172 - #40 func
+ERROR 04:15:08,172 - 
+Sintaksna greska na liniji 13
+ERROR 04:15:08,173 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13
+INFO  04:15:08,173 - A
+INFO  04:15:08,173 - Global var count = 2
+INFO  04:15:08,173 - Local var count = 1
+INFO  04:15:08,173 - Global const count = 0
+INFO  04:15:08,173 - Global array count = 1
+INFO  04:15:08,173 - B
+INFO  04:15:08,173 - Functions in main count = -1
+INFO  04:15:08,173 - Statement block count = 0
+INFO  04:15:08,173 - Function calls in main count = 0
+INFO  04:15:08,173 - Formal arguments declaration count = 0
+INFO  04:15:08,173 - C
+INFO  04:15:08,173 - Nested class count = 0
+INFO  04:15:08,173 - Nested class methods count = 0
+INFO  04:15:08,174 - Nested class field count = 0

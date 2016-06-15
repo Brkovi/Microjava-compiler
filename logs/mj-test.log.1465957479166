@@ -1,0 +1,55 @@
+INFO  04:22:48,519 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  04:22:48,528 - #2 program
+INFO  04:22:48,528 - #40 MJProgram
+INFO  04:22:48,529 - #40 int
+INFO  04:22:48,529 - #40 x
+INFO  04:22:48,529 - #4 ,
+INFO  04:22:48,529 - #40 y
+INFO  04:22:48,529 - #5 ;
+INFO  04:22:48,529 - #40 double
+INFO  04:22:48,529 - #40 niz
+INFO  04:22:48,529 - #25 [
+INFO  04:22:48,529 - #26 ]
+INFO  04:22:48,530 - #5 ;
+INFO  04:22:48,530 - #6 class
+INFO  04:22:48,530 - #40 foo
+INFO  04:22:48,530 - #23 {
+INFO  04:22:48,530 - #24 }
+INFO  04:22:48,530 - #23 {
+INFO  04:22:48,530 - #40 double
+INFO  04:22:48,530 - #40 func
+INFO  04:22:48,530 - #27 (
+INFO  04:22:48,530 - #40 int
+INFO  04:22:48,531 - #40 arg
+INFO  04:22:48,531 - #28 )
+INFO  04:22:48,531 - #23 {
+INFO  04:22:48,531 - #24 }
+INFO  04:22:48,531 - #9 void
+INFO  04:22:48,531 - #40 main
+INFO  04:22:48,531 - #27 (
+INFO  04:22:48,531 - #28 )
+INFO  04:22:48,531 - #40 int
+INFO  04:22:48,531 - #40 z
+INFO  04:22:48,531 - #5 ;
+INFO  04:22:48,531 - #23 {
+INFO  04:22:48,532 - #40 func
+INFO  04:22:48,532 - #27 (
+INFO  04:22:48,532 - #40 x
+INFO  04:22:48,532 - #28 )
+ERROR 04:22:48,532 - 
+Sintaksna greska na liniji 18
+ERROR 04:22:48,532 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 18
+INFO  04:22:48,532 - A
+INFO  04:22:48,532 - Global var count = 3
+INFO  04:22:48,532 - Local var count = 1
+INFO  04:22:48,532 - Global const count = 0
+INFO  04:22:48,532 - Global array count = 1
+INFO  04:22:48,532 - B
+INFO  04:22:48,532 - Functions in main count = -1
+INFO  04:22:48,533 - Statement block count = 0
+INFO  04:22:48,533 - Function calls in main count = 0
+INFO  04:22:48,533 - Formal arguments declaration count = 1
+INFO  04:22:48,533 - C
+INFO  04:22:48,533 - Nested class count = 0
+INFO  04:22:48,533 - Nested class methods count = 0
+INFO  04:22:48,533 - Nested class field count = 0

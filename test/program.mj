@@ -1,11 +1,24 @@
 program MJProgram
 	int x, y;
+	double niz[];
+	class foo
+	{
+	
+	}
+
 {
-	void main() {
-		//'k'
-		"string"
-		//komentar
-		true
-		false
+	double func(int arg)
+	{
+				
+	}
+	
+	void main()
+		int z;
+	{
+		
+		{
+			func(x);
+		}
+		
 	}
 }

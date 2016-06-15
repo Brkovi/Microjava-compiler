@@ -1,0 +1,26 @@
+INFO  03:02:01,091 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  03:02:01,099 - #2 program
+INFO  03:02:01,100 - #40 MJProgram
+INFO  03:02:01,100 - #40 int
+INFO  03:02:01,100 - #40 x
+INFO  03:02:01,100 - #4 ,
+INFO  03:02:01,100 - #40 y
+INFO  03:02:01,100 - #5 ;
+INFO  03:02:01,100 - #40 double
+INFO  03:02:01,100 - #40 niz
+INFO  03:02:01,100 - #25 [
+INFO  03:02:01,100 - #26 ]
+INFO  03:02:01,101 - #5 ;
+INFO  03:02:01,101 - #23 {
+INFO  03:02:01,101 - #9 void
+INFO  03:02:01,101 - #40 main
+INFO  03:02:01,101 - #27 (
+INFO  03:02:01,101 - #28 )
+INFO  03:02:01,101 - #40 int
+INFO  03:02:01,101 - #40 z
+INFO  03:02:01,101 - #5 ;
+INFO  03:02:01,101 - #23 {
+INFO  03:02:01,101 - #24 }
+INFO  03:02:01,102 - #24 }
+INFO  03:02:01,102 - Global var count = 2
+INFO  03:02:01,102 - Global array count = 1

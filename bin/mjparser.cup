@@ -6,15 +6,13 @@ import org.apache.log4j.*;
 //import java.io.*;
 
 
-parser code {:
-	
-	int printCallCount = 0;
-	
-	int globalVarCount = 0, localVarCount = 0, globalConstCount = 0, globalArrayCount = 0;
-	
-	bool mainEntered = false;
-	
+parser code
+{:
 	Logger log = Logger.getLogger(getClass());
+   
+   	boolean mainEntered = false, inClass = false;
+	
+	int nestingDepth = 0;
    
    
     // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
@@ -40,11 +38,33 @@ parser code {:
     }
 :}
 
-scan with {:
+scan with
+{:
 	Symbol s = this.getScanner().next_token();
 	if (s != null && s.value != null) 
+	{
 		log.info(s.toString() + " " + s.value.toString());
+		
+		if(s.value.toString().equals("main")) mainEntered = true;
+		
+		if(s.value.toString().equals("class"))
+		{
+			if(!inClass) inClass = true;
+			else nestingDepth++;
+		}
+	}
+	
 	return s;
+:}
+
+action code
+{:
+	int globalVarCount = 0, localVarCount = 0, globalConstCount = 0, globalArrayCount = 0;
+	
+	int mainFuncDefCnt = -1, statementBlockCnt = 0, mainFuncCall = 0, formArgDecl = 0;
+	
+	int nestedClassDefCnt = 0, nestedMethodDefCnt = 0, nestedFieldDefCnt = 0;
+	
 :}
 
 terminal PROG, ASSIGN, COMMA, SEMI, CLASS, EXTENDS, CONST, VOID, WHILE, BREAK ;
@@ -84,9 +104,6 @@ non terminal ConstValList, ConstVal ;
 
 // VarDecl
 non terminal VarList, Var, Array, Brackets ;
-
-// OptionalBrackets
-non terminal OptionalBrackets ;
 
 // ClassDecl
 non terminal OptionalExtends, VarDeclList, OptionalMethodDeclList ;
@@ -150,7 +167,12 @@ MethodDeclList ::= MethodDeclList MethodDecl
 					;
 
 // ConstDecl
-ConstDecl ::= CONST Type ConstValList SEMI ;
+ConstDecl ::= CONST Type ConstValList SEMI 
+				{:
+					if(!parser.mainEntered)globalConstCount++;
+					else if(parser.nestingDepth > 0) nestedFieldDefCnt++;
+				:}
+				;
 
 ConstValList ::= ConstValList COMMA ConstVal
 			|
@@ -169,21 +191,34 @@ VarList ::= VarList COMMA Var
 			Array
 			;
 			
-Var ::= IDENT ;
+Var ::= IDENT
+	{: 
+		if(!parser.mainEntered) globalVarCount++;
+		else if(!parser.inClass) localVarCount++;
+			else if(parser.nestingDepth > 0) nestedFieldDefCnt++;
+	:} 
+	;
 
-Array ::= IDENT Brackets ;
+Array ::= IDENT Brackets
+			{:
+				if(!parser.mainEntered)globalArrayCount++;
+				else if(parser.nestingDepth > 0) nestedFieldDefCnt++;
+			:}
+			;
 
-Brackets ::= L_BRACKET R_BRACKET ;
-
-// OptionalBrackets
-OptionalBrackets ::= L_BRACKET R_BRACKET
-						|
-						/* epsilon */
-						;		
+Brackets ::= L_BRACKET R_BRACKET ;	
 
 // ClassDecl
-ClassDecl ::= CLASS IDENT OptionalExtends L_CURLY 
-				VarDeclList OptionalMethodDeclList R_CURLY ;	
+ClassDecl ::= CLASS IDENT OptionalExtends L_CURLY VarDeclList OptionalMethodDeclList R_CURLY
+				{:
+					if(parser.nestingDepth > 0)
+					{
+						parser.nestingDepth--;
+						nestedClassDefCnt++;	
+					}
+					else parser.inClass = false;
+				:}
+				;	
 				
 OptionalExtends ::= EXTENDS Type
 					|
@@ -202,7 +237,12 @@ OptionalMethodDeclList ::= L_CURLY MethodDeclList R_CURLY
 					
 // MethodDecl
 MethodDecl ::= TypeOrVoid IDENT L_PAREN OptionalFormPars R_PAREN
-				VarDeclList L_CURLY StatementList R_CURLY;
+				VarDeclList L_CURLY StatementList R_CURLY
+				{:
+					if(parser.mainEntered && !parser.inClass) mainFuncDefCnt++;
+					else if(parser.nestingDepth > 0) nestedMethodDefCnt++;
+				:}
+				;
 				
 TypeOrVoid ::= Type
 				|
@@ -223,6 +263,10 @@ StatementList ::= StatementList Statement
 FormPars ::= FormPars COMMA Type Var
 				|
 				Type Var
+				{:
+				formArgDecl++;
+				globalVarCount--;
+				:}
 				;
 
 // Type
@@ -253,9 +297,18 @@ Matched ::= Designator Group1 SEMI
 				PRINT L_PAREN Expr OptNum R_PAREN SEMI
 				|
 				L_CURLY StatementList R_CURLY
+				{: statementBlockCnt++; :}
 				;
 			  
-Group1 ::= ASSIGN Expr | L_PAREN OptActPars R_CURLY | INC | DEC ;
+Group1 ::= ASSIGN Expr 
+					|
+					L_PAREN OptActPars R_PAREN
+					{: mainFuncCall++ ; :}
+					|
+					INC
+					|
+					DEC
+					;
 
 OptActPars ::= ActPars
 				|

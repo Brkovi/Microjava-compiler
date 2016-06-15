@@ -1,0 +1,38 @@
+INFO  03:18:46,981 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  03:18:46,988 - #2 program
+INFO  03:18:46,988 - #40 MJProgram
+INFO  03:18:46,988 - #40 int
+INFO  03:18:46,988 - #40 x
+INFO  03:18:46,989 - #4 ,
+INFO  03:18:46,989 - #40 y
+INFO  03:18:46,989 - #5 ;
+INFO  03:18:46,989 - #40 double
+INFO  03:18:46,989 - #40 niz
+INFO  03:18:46,989 - #25 [
+INFO  03:18:46,989 - #26 ]
+INFO  03:18:46,989 - #5 ;
+INFO  03:18:46,989 - #23 {
+INFO  03:18:46,989 - #9 void
+INFO  03:18:46,989 - #40 main
+INFO  03:18:46,990 - #27 (
+INFO  03:18:46,990 - #28 )
+INFO  03:18:46,990 - #40 int
+INFO  03:18:46,990 - #40 z
+INFO  03:18:46,990 - #5 ;
+INFO  03:18:46,990 - #23 {
+INFO  03:18:46,990 - #24 }
+INFO  03:18:46,990 - #24 }
+INFO  03:18:46,990 - A
+INFO  03:18:46,990 - Global var count = 2
+INFO  03:18:46,990 - Local var count = 1
+INFO  03:18:46,990 - Global const count = 0
+INFO  03:18:46,990 - Global array count = 1
+INFO  03:18:46,991 - B
+INFO  03:18:46,991 - Functions in main count = 1
+INFO  03:18:46,991 - Statement block count = 0
+INFO  03:18:46,991 - Function calls in main count = 0
+INFO  03:18:46,991 - Formal arguments declaration count = 0
+INFO  03:18:46,991 - C
+INFO  03:18:46,991 - Nested class count = 0
+INFO  03:18:46,991 - Nested class methods count = 0
+INFO  03:18:46,991 - Nested class field count = 0

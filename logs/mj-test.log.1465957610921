@@ -1,0 +1,49 @@
+INFO  04:26:28,216 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  04:26:28,224 - #2 program
+INFO  04:26:28,224 - #40 MJProgram
+INFO  04:26:28,224 - #40 int
+INFO  04:26:28,224 - #40 x
+INFO  04:26:28,224 - #4 ,
+INFO  04:26:28,225 - #40 y
+INFO  04:26:28,225 - #5 ;
+INFO  04:26:28,225 - #40 double
+INFO  04:26:28,225 - #40 niz
+INFO  04:26:28,225 - #25 [
+INFO  04:26:28,225 - #26 ]
+INFO  04:26:28,225 - #5 ;
+INFO  04:26:28,225 - #6 class
+INFO  04:26:28,225 - #40 foo
+INFO  04:26:28,225 - #23 {
+INFO  04:26:28,225 - #24 }
+INFO  04:26:28,226 - #23 {
+INFO  04:26:28,226 - #9 void
+INFO  04:26:28,226 - #40 main
+INFO  04:26:28,226 - #27 (
+INFO  04:26:28,226 - #28 )
+INFO  04:26:28,226 - #40 int
+INFO  04:26:28,226 - #40 z
+INFO  04:26:28,226 - #5 ;
+INFO  04:26:28,226 - #23 {
+INFO  04:26:28,226 - #23 {
+INFO  04:26:28,226 - #40 func
+INFO  04:26:28,226 - #27 (
+INFO  04:26:28,226 - #40 x
+INFO  04:26:28,227 - #28 )
+INFO  04:26:28,227 - #5 ;
+INFO  04:26:28,227 - #24 }
+INFO  04:26:28,227 - #24 }
+INFO  04:26:28,227 - #24 }
+INFO  04:26:28,227 - A
+INFO  04:26:28,227 - Global var count = 2
+INFO  04:26:28,227 - Local var count = 1
+INFO  04:26:28,227 - Global const count = 0
+INFO  04:26:28,227 - Global array count = 1
+INFO  04:26:28,227 - B
+INFO  04:26:28,227 - Functions in main count = 0
+INFO  04:26:28,227 - Statement block count = 1
+INFO  04:26:28,228 - Function calls in main count = 1
+INFO  04:26:28,228 - Formal arguments declaration count = 0
+INFO  04:26:28,228 - C
+INFO  04:26:28,228 - Nested class count = 0
+INFO  04:26:28,228 - Nested class methods count = 0
+INFO  04:26:28,228 - Nested class field count = 0

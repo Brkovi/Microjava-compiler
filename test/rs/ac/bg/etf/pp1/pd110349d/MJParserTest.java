@@ -37,7 +37,23 @@ public class MJParserTest {
 			MJParser p = new MJParser(lexer);
 	        Symbol s = p.parse();  //pocetak parsiranja
 	        
-	        log.info("Print calls = " + p.printCallCount);
+	        log.info("A");
+	        log.info("Global var count = " + p.action_obj.globalVarCount);
+	        log.info("Local var count = " + p.action_obj.localVarCount);
+	        log.info("Global const count = " + p.action_obj.globalConstCount);
+	        log.info("Global array count = " + p.action_obj.globalArrayCount);
+	        
+	        log.info("B");
+	        log.info("Functions in main count = " + p.action_obj.mainFuncDefCnt);
+	        log.info("Statement block count = " + p.action_obj.statementBlockCnt);
+	        log.info("Function calls in main count = " + p.action_obj.mainFuncCall);
+	        log.info("Formal arguments declaration count = " + p.action_obj.formArgDecl);
+	        
+	        log.info("C");
+	        log.info("Nested class count = " + p.action_obj.nestedClassDefCnt);
+	        log.info("Nested class methods count = " + p.action_obj.nestedMethodDefCnt);
+	        log.info("Nested class field count = " + p.action_obj.nestedFieldDefCnt);
+	        
 	        
 		} 
 		finally {

@@ -1,0 +1,19 @@
+INFO  22:48:54,794 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  22:48:54,802 - #2 program
+INFO  22:48:54,802 - #40 MJProgram
+INFO  22:48:54,802 - #40 int
+INFO  22:48:54,802 - #40 x
+INFO  22:48:54,802 - #4 ,
+INFO  22:48:54,802 - #40 y
+INFO  22:48:54,803 - #5 ;
+INFO  22:48:54,803 - #23 {
+INFO  22:48:54,803 - #9 void
+INFO  22:48:54,803 - #40 main
+INFO  22:48:54,803 - #27 (
+INFO  22:48:54,803 - #28 )
+INFO  22:48:54,803 - #23 {
+INFO  22:48:54,803 - #44 string
+ERROR 22:48:54,803 - 
+Sintaksna greska na liniji 6
+ERROR 22:48:54,803 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6
+INFO  22:48:54,803 - Print calls = 0

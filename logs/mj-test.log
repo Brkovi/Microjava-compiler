@@ -1,19 +1,57 @@
-INFO  22:48:54,794 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
-INFO  22:48:54,802 - #2 program
-INFO  22:48:54,802 - #40 MJProgram
-INFO  22:48:54,802 - #40 int
-INFO  22:48:54,802 - #40 x
-INFO  22:48:54,802 - #4 ,
-INFO  22:48:54,802 - #40 y
-INFO  22:48:54,803 - #5 ;
-INFO  22:48:54,803 - #23 {
-INFO  22:48:54,803 - #9 void
-INFO  22:48:54,803 - #40 main
-INFO  22:48:54,803 - #27 (
-INFO  22:48:54,803 - #28 )
-INFO  22:48:54,803 - #23 {
-INFO  22:48:54,803 - #44 string
-ERROR 22:48:54,803 - 
-Sintaksna greska na liniji 6
-ERROR 22:48:54,803 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6
-INFO  22:48:54,803 - Print calls = 0
+INFO  17:08:04,855 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  17:08:04,866 - #2 program
+INFO  17:08:04,866 - #40 MJProgram
+INFO  17:08:04,866 - #40 int
+INFO  17:08:04,866 - #40 x
+INFO  17:08:04,866 - #4 ,
+INFO  17:08:04,866 - #40 y
+INFO  17:08:04,866 - #5 ;
+INFO  17:08:04,867 - #40 double
+INFO  17:08:04,867 - #40 niz
+INFO  17:08:04,867 - #25 [
+INFO  17:08:04,867 - #26 ]
+INFO  17:08:04,867 - #5 ;
+INFO  17:08:04,867 - #6 class
+INFO  17:08:04,867 - #40 foo
+INFO  17:08:04,867 - #23 {
+INFO  17:08:04,867 - #24 }
+INFO  17:08:04,867 - #23 {
+INFO  17:08:04,867 - #40 double
+INFO  17:08:04,867 - #40 func
+INFO  17:08:04,868 - #27 (
+INFO  17:08:04,868 - #40 int
+INFO  17:08:04,868 - #40 arg
+INFO  17:08:04,868 - #28 )
+INFO  17:08:04,868 - #23 {
+INFO  17:08:04,868 - #24 }
+INFO  17:08:04,868 - #9 void
+INFO  17:08:04,868 - #40 main
+INFO  17:08:04,868 - #27 (
+INFO  17:08:04,868 - #28 )
+INFO  17:08:04,868 - #40 int
+INFO  17:08:04,868 - #40 z
+INFO  17:08:04,868 - #5 ;
+INFO  17:08:04,868 - #23 {
+INFO  17:08:04,869 - #23 {
+INFO  17:08:04,869 - #40 func
+INFO  17:08:04,869 - #27 (
+INFO  17:08:04,869 - #40 x
+INFO  17:08:04,869 - #28 )
+INFO  17:08:04,869 - #5 ;
+INFO  17:08:04,869 - #24 }
+INFO  17:08:04,869 - #24 }
+INFO  17:08:04,869 - #24 }
+INFO  17:08:04,869 - A
+INFO  17:08:04,869 - Global var count = 2
+INFO  17:08:04,869 - Local var count = 1
+INFO  17:08:04,870 - Global const count = 0
+INFO  17:08:04,870 - Global array count = 1
+INFO  17:08:04,870 - B
+INFO  17:08:04,870 - Functions in main count = 0
+INFO  17:08:04,870 - Statement block count = 1
+INFO  17:08:04,870 - Function calls in main count = 1
+INFO  17:08:04,870 - Formal arguments declaration count = 1
+INFO  17:08:04,870 - C
+INFO  17:08:04,870 - Nested class count = 0
+INFO  17:08:04,870 - Nested class methods count = 0
+INFO  17:08:04,870 - Nested class field count = 0

@@ -1,0 +1,64 @@
+INFO  21:37:48,459 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  21:37:48,466 - #2 program
+INFO  21:37:48,466 - #40 MJProgram
+INFO  21:37:48,466 - #40 int
+INFO  21:37:48,466 - #40 x
+INFO  21:37:48,467 - #4 ,
+INFO  21:37:48,467 - #40 k
+INFO  21:37:48,467 - #24 }
+ERROR 21:37:48,467 - 
+Sintaksna greska na liniji 2
+INFO  21:37:48,467 - #40 a
+INFO  21:37:48,467 - #4 ,
+INFO  21:37:48,467 - #40 y
+INFO  21:37:48,468 - #5 ;
+INFO  21:37:48,468 - #40 double
+DEBUG 21:37:48,468 - Uspesan oporavak od greske pri deklarisanju globalne promenljive.
+INFO  21:37:48,468 - #40 niz
+INFO  21:37:48,468 - #25 [
+INFO  21:37:48,468 - #26 ]
+INFO  21:37:48,468 - #5 ;
+INFO  21:37:48,468 - #6 class
+INFO  21:37:48,468 - #40 foo
+INFO  21:37:48,469 - #23 {
+INFO  21:37:48,469 - #24 }
+INFO  21:37:48,469 - #23 {
+INFO  21:37:48,469 - #40 double
+INFO  21:37:48,469 - #40 func
+INFO  21:37:48,469 - #27 (
+INFO  21:37:48,469 - #40 int
+INFO  21:37:48,469 - #40 arg
+INFO  21:37:48,469 - #28 )
+INFO  21:37:48,469 - #23 {
+INFO  21:37:48,469 - #24 }
+INFO  21:37:48,469 - #9 void
+INFO  21:37:48,469 - #40 main
+INFO  21:37:48,470 - #27 (
+INFO  21:37:48,470 - #28 )
+INFO  21:37:48,470 - #40 int
+INFO  21:37:48,470 - #40 z
+INFO  21:37:48,470 - #5 ;
+INFO  21:37:48,470 - #23 {
+INFO  21:37:48,470 - #23 {
+INFO  21:37:48,470 - #40 func
+INFO  21:37:48,470 - #27 (
+INFO  21:37:48,470 - #40 x
+INFO  21:37:48,470 - #28 )
+INFO  21:37:48,470 - #5 ;
+INFO  21:37:48,470 - #24 }
+INFO  21:37:48,470 - #24 }
+INFO  21:37:48,471 - #24 }
+INFO  21:37:48,471 - A
+INFO  21:37:48,471 - Global var count = 2
+INFO  21:37:48,471 - Local var count = 1
+INFO  21:37:48,471 - Global const count = 0
+INFO  21:37:48,471 - Global array count = 1
+INFO  21:37:48,471 - B
+INFO  21:37:48,471 - Functions in main count = 0
+INFO  21:37:48,471 - Statement block count = 1
+INFO  21:37:48,471 - Function calls in main count = 1
+INFO  21:37:48,471 - Formal arguments declaration count = 1
+INFO  21:37:48,471 - C
+INFO  21:37:48,471 - Nested class count = 0
+INFO  21:37:48,471 - Nested class methods count = 0
+INFO  21:37:48,471 - Nested class field count = 0

@@ -10,7 +10,7 @@ parser code
 {:
 	Logger log = Logger.getLogger(getClass());
    
-   	boolean mainEntered = false, inClass = false;
+   	boolean mainEntered = false, inClass = false, globalVarArea = true, formalParsArea = false;
 	
 	int nestingDepth = 0;
    
@@ -52,6 +52,9 @@ scan with
 			if(!inClass) inClass = true;
 			else nestingDepth++;
 		}
+		
+		if(s.value.toString().equals("{")) globalVarArea = false;
+		if(s.value.toString().equals("}") && inClass) globalVarArea = true;
 	}
 	
 	return s;
@@ -169,7 +172,7 @@ MethodDeclList ::= MethodDeclList MethodDecl
 // ConstDecl
 ConstDecl ::= CONST Type ConstValList SEMI 
 				{:
-					if(!parser.mainEntered)globalConstCount++;
+					if(parser.globalVarArea)globalConstCount++;
 					else if(parser.nestingDepth > 0) nestedFieldDefCnt++;
 				:}
 				;
@@ -177,12 +180,24 @@ ConstDecl ::= CONST Type ConstValList SEMI
 ConstValList ::= ConstValList COMMA ConstVal
 			|
 			IDENT ASSIGN ConstVal
+			|
+			IDENT ASSIGN error
+			{:
+				parser.log.debug("Uspesan oporavak od greske pri dodeli vrednosti.");
+			:}
 			;
 			
 ConstVal ::= NUM | CHAR_CONST | BOOL_CONST | STR_CONST;
 
 // VarDecl
-VarDecl ::= Type VarList SEMI ;
+VarDecl ::= Type VarList SEMI
+			|
+			Type error
+			{:
+				if(parser.mainEntered)
+					parser.log.debug("Uspesan oporavak od greske pri deklarisanju lokalne promenljive.");
+			:}
+			;
 
 VarList ::= VarList COMMA Var
 			|
@@ -192,16 +207,31 @@ VarList ::= VarList COMMA Var
 			;
 			
 Var ::= IDENT
-	{: 
-		if(!parser.mainEntered) globalVarCount++;
-		else if(!parser.inClass) localVarCount++;
-			else if(parser.nestingDepth > 0) nestedFieldDefCnt++;
-	:} 
-	;
+		{: 
+			if(parser.globalVarArea) globalVarCount++;
+			else if(!parser.inClass && parser.mainEntered) localVarCount++;
+				else if(parser.nestingDepth > 0) nestedFieldDefCnt++;
+		:} 
+		|
+		error
+		{:
+			if(parser.globalVarArea)
+				parser.log.debug("Uspesan oporavak od greske pri deklarisanju globalne promenljive.");
+			else if(parser.mainEntered)
+				parser.log.debug("Uspesan oporavak od greske pri deklarisanju lokalne promenljive.");
+			else if(parser.formalParsArea)
+			{
+				parser.log.debug("Uspesan oporavak od greske pri deklarisanju formalnih parametara.");
+				formArgDecl--;	
+			}
+			else if(nestingDepth > 0)
+				parser.log.debug("Uspesan oporavak od greske pri deklaraciji polja unutrasnje klase.");
+		:}
+		;
 
 Array ::= IDENT Brackets
 			{:
-				if(!parser.mainEntered)globalArrayCount++;
+				if(parser.globalVarArea)globalArrayCount++;
 				else if(parser.nestingDepth > 0) nestedFieldDefCnt++;
 			:}
 			;
@@ -223,6 +253,9 @@ ClassDecl ::= CLASS IDENT OptionalExtends L_CURLY VarDeclList OptionalMethodDecl
 OptionalExtends ::= EXTENDS Type
 					|
 					/* epsilon */
+					|
+					error
+					{: parser.log.debug("Uspesan oporavak od greske pri deklaraciji prosirenja klase."); :}
 					;
 					
 VarDeclList ::= VarDeclList VarDecl
@@ -236,7 +269,10 @@ OptionalMethodDeclList ::= L_CURLY MethodDeclList R_CURLY
 							;
 					
 // MethodDecl
-MethodDecl ::= TypeOrVoid IDENT L_PAREN OptionalFormPars R_PAREN
+MethodDecl ::= TypeOrVoid IDENT
+				L_PAREN {: parser.formalParsArea = true; :}
+				OptionalFormPars
+				R_PAREN {: parser.formalParsArea = false; :}
 				VarDeclList L_CURLY StatementList R_CURLY
 				{:
 					if(parser.mainEntered && !parser.inClass) mainFuncDefCnt++;
@@ -261,11 +297,13 @@ StatementList ::= StatementList Statement
 					
 // FormPars
 FormPars ::= FormPars COMMA Type Var
+				{:
+					formArgDecl++;
+				:}
 				|
 				Type Var
 				{:
-				formArgDecl++;
-				globalVarCount--;
+					formArgDecl++;
 				:}
 				;
 
@@ -300,15 +338,20 @@ Matched ::= Designator Group1 SEMI
 				{: statementBlockCnt++; :}
 				;
 			  
-Group1 ::= ASSIGN Expr 
-					|
-					L_PAREN OptActPars R_PAREN
-					{: mainFuncCall++ ; :}
-					|
-					INC
-					|
-					DEC
-					;
+Group1 ::= ASSIGN Expr
+			|
+			ASSIGN error
+			{:
+				parser.log.debug("Uspesan oporavak od greske pri dodeli vrednosti.");
+			:}
+			|
+			L_PAREN OptActPars R_PAREN
+			{: mainFuncCall++ ; :}
+			|
+			INC
+			|
+			DEC
+			;
 
 OptActPars ::= ActPars
 				|
@@ -326,7 +369,11 @@ OptNum ::= NUM
 			;					
 		
 // ActPars		
-ActPars ::= Expr AditionalExprList;
+ActPars ::= Expr AditionalExprList
+			|
+			error
+			{: parser.log.debug("Uspesan oporavak od greske liste parametara."); :}
+			;
 
 AditionalExprList ::= AditionalExprList COMMA Expr
 						|
@@ -334,7 +381,11 @@ AditionalExprList ::= AditionalExprList COMMA Expr
 						;
 						
 // Condition
-Condition ::= CondTerm AditionalCondTermList;
+Condition ::= CondTerm AditionalCondTermList
+				|
+				error
+				{: parser.log.debug("Uspesan oporavak od greske logickog izraza."); :}
+				;
 
 AditionalCondTermList ::= AditionalCondTermList LOG_OR CondTerm
 							|
@@ -390,6 +441,9 @@ Factor ::= Designator OptDesPars
 			NEW Type OptBracketExpr
 			|
 			L_PAREN Expr R_PAREN
+			|
+			L_PAREN error R_PAREN
+			{: parser.log.debug("Uspesan oporavak od greske izraza za indeksiranje niza."); :}
 			;
 
 OptBracketExpr ::= L_BRACKET Expr R_BRACKET
@@ -413,6 +467,9 @@ Group2List ::= Group2List Group2
 Group2 ::= DOT IDENT
 			|
 			L_BRACKET Expr R_BRACKET
+			|
+			L_PAREN error R_PAREN
+			{: parser.log.debug("Uspesan oporavak od greske izraza za indeksiranje niza."); :}
 			;
 			
 // Relop

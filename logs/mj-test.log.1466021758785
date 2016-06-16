@@ -1,0 +1,62 @@
+INFO  22:10:28,550 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  22:10:28,561 - #2 program
+INFO  22:10:28,561 - #40 MJProgram
+INFO  22:10:28,561 - #40 int
+INFO  22:10:28,561 - #40 x
+INFO  22:10:28,561 - #4 ,
+INFO  22:10:28,561 - #40 ka
+INFO  22:10:28,561 - #4 ,
+INFO  22:10:28,561 - #40 y
+INFO  22:10:28,561 - #5 ;
+INFO  22:10:28,561 - #40 double
+INFO  22:10:28,561 - #40 niz
+INFO  22:10:28,562 - #25 [
+INFO  22:10:28,562 - #26 ]
+INFO  22:10:28,562 - #5 ;
+INFO  22:10:28,562 - #6 class
+INFO  22:10:28,562 - #40 foo
+INFO  22:10:28,562 - #23 {
+INFO  22:10:28,562 - #24 }
+INFO  22:10:28,562 - #23 {
+INFO  22:10:28,562 - #40 double
+INFO  22:10:28,562 - #40 func
+INFO  22:10:28,562 - #27 (
+INFO  22:10:28,562 - #40 int
+INFO  22:10:28,562 - #40 arg
+INFO  22:10:28,563 - #28 )
+INFO  22:10:28,563 - #23 {
+INFO  22:10:28,563 - #24 }
+INFO  22:10:28,563 - #9 void
+INFO  22:10:28,563 - #40 main
+INFO  22:10:28,563 - #27 (
+INFO  22:10:28,563 - #28 )
+INFO  22:10:28,563 - #40 int
+INFO  22:10:28,563 - #40 m
+INFO  22:10:28,563 - #40 i
+ERROR 22:10:28,563 - 
+Sintaksna greska na liniji 16
+INFO  22:10:28,563 - #23 {
+INFO  22:10:28,563 - #23 {
+INFO  22:10:28,563 - #40 func
+INFO  22:10:28,564 - #27 (
+DEBUG 22:10:28,564 - Uspesan oporavak od greske pri deklarisanju lokalne promenljive.
+INFO  22:10:28,564 - #40 x
+INFO  22:10:28,564 - #28 )
+INFO  22:10:28,564 - #5 ;
+INFO  22:10:28,564 - #24 }
+INFO  22:10:28,565 - #24 }
+INFO  22:10:28,565 - #24 }
+INFO  22:10:28,565 - A
+INFO  22:10:28,565 - Global var count = 3
+INFO  22:10:28,565 - Local var count = 0
+INFO  22:10:28,565 - Global const count = 0
+INFO  22:10:28,565 - Global array count = 1
+INFO  22:10:28,565 - B
+INFO  22:10:28,565 - Functions in main count = 0
+INFO  22:10:28,565 - Statement block count = 1
+INFO  22:10:28,565 - Function calls in main count = 1
+INFO  22:10:28,565 - Formal arguments declaration count = 1
+INFO  22:10:28,565 - C
+INFO  22:10:28,565 - Nested class count = 0
+INFO  22:10:28,565 - Nested class methods count = 0
+INFO  22:10:28,565 - Nested class field count = 0

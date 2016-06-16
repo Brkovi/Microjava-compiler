@@ -1,0 +1,64 @@
+INFO  21:48:41,409 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  21:48:41,416 - #2 program
+INFO  21:48:41,417 - #40 MJProgram
+INFO  21:48:41,417 - #40 int
+INFO  21:48:41,417 - #40 x
+INFO  21:48:41,417 - #4 ,
+INFO  21:48:41,417 - #40 ka
+INFO  21:48:41,417 - #4 ,
+INFO  21:48:41,417 - #40 y
+INFO  21:48:41,417 - #5 ;
+INFO  21:48:41,417 - #40 double
+INFO  21:48:41,417 - #40 niz
+INFO  21:48:41,418 - #25 [
+INFO  21:48:41,418 - #26 ]
+INFO  21:48:41,418 - #5 ;
+INFO  21:48:41,418 - #6 class
+INFO  21:48:41,418 - #40 foo
+INFO  21:48:41,418 - #23 {
+INFO  21:48:41,418 - #24 }
+INFO  21:48:41,418 - #23 {
+INFO  21:48:41,418 - #40 double
+INFO  21:48:41,418 - #40 func
+INFO  21:48:41,418 - #27 (
+INFO  21:48:41,418 - #40 int
+INFO  21:48:41,418 - #40 arg
+INFO  21:48:41,419 - #28 )
+INFO  21:48:41,419 - #23 {
+INFO  21:48:41,419 - #24 }
+INFO  21:48:41,419 - #9 void
+INFO  21:48:41,419 - #40 main
+INFO  21:48:41,419 - #27 (
+INFO  21:48:41,419 - #28 )
+INFO  21:48:41,419 - #40 int
+INFO  21:48:41,419 - #40 z
+INFO  21:48:41,419 - #4 ,
+INFO  21:48:41,419 - #40 m
+INFO  21:48:41,419 - #40 i
+ERROR 21:48:41,419 - 
+Sintaksna greska na liniji 16
+INFO  21:48:41,420 - #5 ;
+INFO  21:48:41,420 - #23 {
+INFO  21:48:41,420 - #23 {
+INFO  21:48:41,420 - #40 func
+INFO  21:48:41,420 - #27 (
+INFO  21:48:41,420 - #40 x
+INFO  21:48:41,420 - #28 )
+INFO  21:48:41,420 - #5 ;
+INFO  21:48:41,421 - #24 }
+INFO  21:48:41,421 - #24 }
+INFO  21:48:41,421 - #24 }
+INFO  21:48:41,421 - A
+INFO  21:48:41,421 - Global var count = 3
+INFO  21:48:41,421 - Local var count = 1
+INFO  21:48:41,421 - Global const count = 0
+INFO  21:48:41,421 - Global array count = 1
+INFO  21:48:41,421 - B
+INFO  21:48:41,421 - Functions in main count = 0
+INFO  21:48:41,421 - Statement block count = 1
+INFO  21:48:41,421 - Function calls in main count = 1
+INFO  21:48:41,421 - Formal arguments declaration count = 1
+INFO  21:48:41,421 - C
+INFO  21:48:41,421 - Nested class count = 0
+INFO  21:48:41,421 - Nested class methods count = 0
+INFO  21:48:41,421 - Nested class field count = 0

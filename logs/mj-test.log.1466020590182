@@ -1,0 +1,62 @@
+INFO  21:52:42,589 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  21:52:42,598 - #2 program
+INFO  21:52:42,598 - #40 MJProgram
+INFO  21:52:42,598 - #40 int
+INFO  21:52:42,598 - #40 x
+INFO  21:52:42,598 - #4 ,
+INFO  21:52:42,598 - #40 ka
+INFO  21:52:42,598 - #4 ,
+INFO  21:52:42,598 - #40 y
+INFO  21:52:42,599 - #5 ;
+INFO  21:52:42,599 - #40 double
+INFO  21:52:42,599 - #40 niz
+INFO  21:52:42,599 - #25 [
+INFO  21:52:42,599 - #26 ]
+INFO  21:52:42,599 - #5 ;
+INFO  21:52:42,599 - #6 class
+INFO  21:52:42,599 - #40 foo
+INFO  21:52:42,599 - #23 {
+INFO  21:52:42,599 - #24 }
+INFO  21:52:42,600 - #23 {
+INFO  21:52:42,600 - #40 double
+INFO  21:52:42,600 - #40 func
+INFO  21:52:42,600 - #27 (
+INFO  21:52:42,600 - #40 int
+INFO  21:52:42,600 - #40 arg
+INFO  21:52:42,600 - #28 )
+INFO  21:52:42,600 - #23 {
+INFO  21:52:42,600 - #24 }
+INFO  21:52:42,600 - #9 void
+INFO  21:52:42,600 - #40 main
+INFO  21:52:42,601 - #27 (
+INFO  21:52:42,601 - #28 )
+INFO  21:52:42,601 - #40 int
+INFO  21:52:42,601 - #40 m
+INFO  21:52:42,601 - #40 i
+ERROR 21:52:42,601 - 
+Sintaksna greska na liniji 16
+INFO  21:52:42,601 - #5 ;
+INFO  21:52:42,601 - #23 {
+INFO  21:52:42,601 - #23 {
+INFO  21:52:42,602 - #40 func
+INFO  21:52:42,602 - #27 (
+INFO  21:52:42,602 - #40 x
+INFO  21:52:42,602 - #28 )
+INFO  21:52:42,602 - #5 ;
+INFO  21:52:42,602 - #24 }
+INFO  21:52:42,602 - #24 }
+INFO  21:52:42,603 - #24 }
+INFO  21:52:42,603 - A
+INFO  21:52:42,603 - Global var count = 3
+INFO  21:52:42,603 - Local var count = 0
+INFO  21:52:42,603 - Global const count = 0
+INFO  21:52:42,603 - Global array count = 1
+INFO  21:52:42,603 - B
+INFO  21:52:42,603 - Functions in main count = 0
+INFO  21:52:42,603 - Statement block count = 1
+INFO  21:52:42,603 - Function calls in main count = 1
+INFO  21:52:42,603 - Formal arguments declaration count = 1
+INFO  21:52:42,603 - C
+INFO  21:52:42,603 - Nested class count = 0
+INFO  21:52:42,603 - Nested class methods count = 0
+INFO  21:52:42,603 - Nested class field count = 0

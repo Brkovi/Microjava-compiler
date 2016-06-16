@@ -1,0 +1,80 @@
+INFO  22:48:10,927 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  22:48:10,934 - #2 program
+INFO  22:48:10,934 - #40 MJProgram
+INFO  22:48:10,934 - #40 int
+INFO  22:48:10,934 - #40 x
+INFO  22:48:10,934 - #4 ,
+INFO  22:48:10,935 - #40 ka
+INFO  22:48:10,935 - #4 ,
+INFO  22:48:10,935 - #40 y
+INFO  22:48:10,935 - #5 ;
+INFO  22:48:10,935 - #40 double
+INFO  22:48:10,935 - #40 niz
+INFO  22:48:10,935 - #25 [
+INFO  22:48:10,935 - #26 ]
+INFO  22:48:10,935 - #5 ;
+INFO  22:48:10,935 - #6 class
+INFO  22:48:10,935 - #40 foo
+INFO  22:48:10,936 - #23 {
+INFO  22:48:10,936 - #24 }
+INFO  22:48:10,936 - #8 const
+INFO  22:48:10,936 - #40 float
+INFO  22:48:10,936 - #40 PI
+INFO  22:48:10,936 - #3 =
+INFO  22:48:10,936 - #41 3
+INFO  22:48:10,936 - #22 .
+ERROR 22:48:10,936 - 
+Sintaksna greska na liniji 9
+INFO  22:48:10,936 - #41 14
+INFO  22:48:10,936 - #4 ,
+INFO  22:48:10,936 - #40 SI
+INFO  22:48:10,937 - #3 =
+INFO  22:48:10,937 - #40 te
+INFO  22:48:10,937 - #5 ;
+INFO  22:48:10,937 - #23 {
+INFO  22:48:10,937 - #40 double
+INFO  22:48:10,937 - #40 func
+DEBUG 22:48:10,937 - Uspesan oporavak od greske pri dodeli vrednosti.
+INFO  22:48:10,938 - #27 (
+INFO  22:48:10,938 - #40 int
+INFO  22:48:10,938 - #40 ar
+INFO  22:48:10,938 - #40 g
+ERROR 22:48:10,938 - 
+Sintaksna greska na liniji 11
+INFO  22:48:10,938 - #28 )
+INFO  22:48:10,938 - #23 {
+INFO  22:48:10,938 - #24 }
+INFO  22:48:10,938 - #9 void
+INFO  22:48:10,938 - #40 main
+INFO  22:48:10,938 - #27 (
+INFO  22:48:10,938 - #28 )
+INFO  22:48:10,938 - #40 int
+INFO  22:48:10,939 - #40 m
+INFO  22:48:10,939 - #40 i
+ERROR 22:48:10,939 - 
+Sintaksna greska na liniji 17
+INFO  22:48:10,939 - #23 {
+INFO  22:48:10,939 - #23 {
+INFO  22:48:10,939 - #40 func
+INFO  22:48:10,939 - #27 (
+DEBUG 22:48:10,939 - Uspesan oporavak od greske pri deklarisanju lokalne promenljive.
+INFO  22:48:10,939 - #40 x
+INFO  22:48:10,939 - #28 )
+INFO  22:48:10,939 - #5 ;
+INFO  22:48:10,939 - #24 }
+INFO  22:48:10,939 - #24 }
+INFO  22:48:10,940 - #24 }
+INFO  22:48:10,940 - A
+INFO  22:48:10,940 - Global var count = 3
+INFO  22:48:10,940 - Local var count = 0
+INFO  22:48:10,940 - Global const count = 0
+INFO  22:48:10,940 - Global array count = 1
+INFO  22:48:10,940 - B
+INFO  22:48:10,940 - Functions in main count = 0
+INFO  22:48:10,940 - Statement block count = 1
+INFO  22:48:10,940 - Function calls in main count = 1
+INFO  22:48:10,940 - Formal arguments declaration count = 1
+INFO  22:48:10,940 - C
+INFO  22:48:10,940 - Nested class count = 0
+INFO  22:48:10,940 - Nested class methods count = 0
+INFO  22:48:10,941 - Nested class field count = 0

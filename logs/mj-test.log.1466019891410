@@ -1,0 +1,65 @@
+INFO  21:43:26,987 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  21:43:26,998 - #2 program
+INFO  21:43:26,998 - #40 MJProgram
+INFO  21:43:26,999 - #40 int
+INFO  21:43:26,999 - #40 x
+INFO  21:43:26,999 - #4 ,
+INFO  21:43:26,999 - #40 ka
+INFO  21:43:26,999 - #4 ,
+INFO  21:43:26,999 - #40 y
+INFO  21:43:26,999 - #5 ;
+INFO  21:43:26,999 - #40 double
+INFO  21:43:26,999 - #40 niz
+INFO  21:43:26,999 - #25 [
+INFO  21:43:26,999 - #26 ]
+INFO  21:43:26,999 - #5 ;
+INFO  21:43:27,000 - #6 class
+INFO  21:43:27,000 - #40 foo
+INFO  21:43:27,000 - #23 {
+INFO  21:43:27,000 - #24 }
+INFO  21:43:27,000 - #23 {
+INFO  21:43:27,000 - #40 double
+INFO  21:43:27,000 - #40 func
+INFO  21:43:27,000 - #27 (
+INFO  21:43:27,000 - #40 int
+INFO  21:43:27,000 - #40 arg
+INFO  21:43:27,000 - #28 )
+INFO  21:43:27,001 - #23 {
+INFO  21:43:27,001 - #24 }
+INFO  21:43:27,001 - #9 void
+INFO  21:43:27,001 - #40 main
+INFO  21:43:27,001 - #27 (
+INFO  21:43:27,001 - #28 )
+INFO  21:43:27,001 - #40 int
+INFO  21:43:27,001 - #40 z
+INFO  21:43:27,001 - #4 ,
+INFO  21:43:27,001 - #40 m
+INFO  21:43:27,001 - #5 ;
+INFO  21:43:27,001 - #40 i
+INFO  21:43:27,001 - #5 ;
+ERROR 21:43:27,001 - 
+Sintaksna greska na liniji 16
+INFO  21:43:27,002 - #23 {
+INFO  21:43:27,002 - #23 {
+INFO  21:43:27,002 - #40 func
+INFO  21:43:27,002 - #27 (
+INFO  21:43:27,002 - #40 x
+INFO  21:43:27,002 - #28 )
+INFO  21:43:27,003 - #5 ;
+INFO  21:43:27,003 - #24 }
+INFO  21:43:27,003 - #24 }
+INFO  21:43:27,003 - #24 }
+INFO  21:43:27,003 - A
+INFO  21:43:27,003 - Global var count = 3
+INFO  21:43:27,003 - Local var count = 2
+INFO  21:43:27,003 - Global const count = 0
+INFO  21:43:27,003 - Global array count = 1
+INFO  21:43:27,003 - B
+INFO  21:43:27,003 - Functions in main count = 0
+INFO  21:43:27,003 - Statement block count = 1
+INFO  21:43:27,003 - Function calls in main count = 1
+INFO  21:43:27,003 - Formal arguments declaration count = 1
+INFO  21:43:27,003 - C
+INFO  21:43:27,003 - Nested class count = 0
+INFO  21:43:27,004 - Nested class methods count = 0
+INFO  21:43:27,004 - Nested class field count = 0

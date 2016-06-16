@@ -1,0 +1,85 @@
+INFO  22:59:49,369 - Compiling source file: E:\projekti\PP1 projekat\Microjava-compiler\test\program.mj
+INFO  22:59:49,377 - #2 program
+INFO  22:59:49,378 - #40 MJProgram
+INFO  22:59:49,378 - #40 int
+INFO  22:59:49,378 - #40 x
+INFO  22:59:49,378 - #4 ,
+INFO  22:59:49,378 - #40 ka
+INFO  22:59:49,378 - #4 ,
+INFO  22:59:49,378 - #40 y
+INFO  22:59:49,378 - #5 ;
+INFO  22:59:49,378 - #40 double
+INFO  22:59:49,379 - #40 niz
+INFO  22:59:49,379 - #25 [
+INFO  22:59:49,379 - #26 ]
+INFO  22:59:49,379 - #5 ;
+INFO  22:59:49,379 - #6 class
+INFO  22:59:49,379 - #40 foo
+INFO  22:59:49,379 - #23 {
+INFO  22:59:49,379 - #24 }
+INFO  22:59:49,379 - #8 const
+INFO  22:59:49,379 - #40 float
+INFO  22:59:49,379 - #40 PI
+INFO  22:59:49,380 - #3 =
+INFO  22:59:49,380 - #41 3
+INFO  22:59:49,380 - #22 .
+ERROR 22:59:49,380 - 
+Sintaksna greska na liniji 9
+INFO  22:59:49,380 - #41 14
+INFO  22:59:49,380 - #4 ,
+INFO  22:59:49,380 - #40 SI
+INFO  22:59:49,381 - #3 =
+INFO  22:59:49,381 - #40 te
+INFO  22:59:49,381 - #5 ;
+INFO  22:59:49,381 - #23 {
+INFO  22:59:49,381 - #40 double
+INFO  22:59:49,381 - #40 func
+DEBUG 22:59:49,381 - Uspesan oporavak od greske pri dodeli vrednosti.
+INFO  22:59:49,381 - #27 (
+INFO  22:59:49,381 - #40 int
+INFO  22:59:49,381 - #40 arg
+INFO  22:59:49,382 - #4 ,
+INFO  22:59:49,382 - #40 int
+INFO  22:59:49,382 - #40 rr
+INFO  22:59:49,382 - #5 ;
+ERROR 22:59:49,382 - 
+Sintaksna greska na liniji 11
+INFO  22:59:49,382 - #40 r
+INFO  22:59:49,382 - #28 )
+INFO  22:59:49,382 - #23 {
+INFO  22:59:49,382 - #24 }
+INFO  22:59:49,382 - #9 void
+DEBUG 22:59:49,382 - Uspesan oporavak od greske pri deklarisanju formalnih parametra.
+INFO  22:59:49,382 - #40 main
+INFO  22:59:49,382 - #27 (
+INFO  22:59:49,382 - #28 )
+INFO  22:59:49,383 - #40 int
+INFO  22:59:49,383 - #40 m
+INFO  22:59:49,383 - #40 i
+ERROR 22:59:49,383 - 
+Sintaksna greska na liniji 17
+INFO  22:59:49,383 - #23 {
+INFO  22:59:49,383 - #23 {
+INFO  22:59:49,383 - #40 func
+INFO  22:59:49,383 - #27 (
+DEBUG 22:59:49,383 - Uspesan oporavak od greske pri deklarisanju lokalne promenljive.
+INFO  22:59:49,383 - #40 x
+INFO  22:59:49,383 - #28 )
+INFO  22:59:49,384 - #5 ;
+INFO  22:59:49,384 - #24 }
+INFO  22:59:49,384 - #24 }
+INFO  22:59:49,384 - #24 }
+INFO  22:59:49,384 - A
+INFO  22:59:49,384 - Global var count = 3
+INFO  22:59:49,384 - Local var count = 0
+INFO  22:59:49,384 - Global const count = 0
+INFO  22:59:49,384 - Global array count = 1
+INFO  22:59:49,384 - B
+INFO  22:59:49,384 - Functions in main count = 0
+INFO  22:59:49,384 - Statement block count = 1
+INFO  22:59:49,384 - Function calls in main count = 1
+INFO  22:59:49,385 - Formal arguments declaration count = 1
+INFO  22:59:49,385 - C
+INFO  22:59:49,385 - Nested class count = 0
+INFO  22:59:49,385 - Nested class methods count = 0
+INFO  22:59:49,385 - Nested class field count = 0
